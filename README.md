@@ -6,7 +6,7 @@
 
 Detect coordinated social-bot networks **without a single training label**. LLM-assisted multi-view feature fusion → adaptive late-fusion graph construction → structural-entropy encoding-tree community discovery → purity-based interpretation.
 
-[🚀 Live Demo](https://Majunrui524.github.io/bigdata-graduation-innovation/) · [📄 Paper (PDF)](paper/Outstanding-Graduation-Innovation-Project.pdf) · [🐍 Python ≥ 3.10](https://www.python.org/) · [📜 MIT License](LICENSE)
+[🚀 Live Demo](https://Majunrui524.github.io/BigData-Graduation-Innovation/) · [📄 Paper (PDF)](paper/Outstanding-Graduation-Innovation-Project.pdf) · [🐍 Python ≥ 3.10](https://www.python.org/) · [📜 MIT License](LICENSE)
 
 </div>
 
