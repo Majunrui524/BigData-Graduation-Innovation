@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twibot22-sampler"
+version = "0.1.0"
+description = "Sampling pipeline for TwiBot-22 subsets."
+readme = "Reference/TwiBot-22/readme.md"
+requires-python = ">=3.10"
+dependencies = ["gensim>=4.3", "ijson>=3.2", "numpy>=1.26", "scikit-learn>=1.5"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

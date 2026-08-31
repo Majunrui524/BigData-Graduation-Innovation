@@ -1,0 +1,43 @@
+{
+  "framework": "LLM features → late fusion graph → structural entropy → encoding tree → community structure analysis",
+  "channels": [
+    {
+      "id": "content",
+      "title": "Content channel",
+      "summary": "Triplet-compressed tweet semantics are embedded and compared with cosine similarity.",
+      "formula": "S_c(i,j)=(1+cos(e_i,e_j))/2"
+    },
+    {
+      "id": "behavior",
+      "title": "Behavior channel",
+      "summary": "Post-type distributions and scalar activity metrics are combined into a behavior similarity.",
+      "formula": "S_b=0.5(1-JS)+0.5 cos(z_i,z_j)"
+    },
+    {
+      "id": "temporal",
+      "title": "Temporal channel",
+      "summary": "UTC-hour posting histograms are compared with normalized DTW distance.",
+      "formula": "S_t(i,j)=1/(1+DTW_avg(i,j))"
+    },
+    {
+      "id": "network",
+      "title": "Network channel",
+      "summary": "Neighborhood overlap and degree similarity approximate structural affinity.",
+      "formula": "S_n=0.7·Jaccard+0.3·cos(d_i,d_j)"
+    }
+  ],
+  "configuration": {
+    "sample_root": "../data/samples/final_v1",
+    "run_root": "../data/samples/final_v1/analysis/run_10k_late",
+    "graph_k": 5,
+    "candidate_k": 40,
+    "graph_backend": "numpy",
+    "community_algorithm": "structural_entropy",
+    "community_count": 898
+  },
+  "notes": [
+    "The main graph visualizes community nodes rather than all 18,743 users at once.",
+    "Primary evaluation in the demo is structural: entropy, modularity, density, clustering, conductance, and community granularity.",
+    "Purity is retained only as a label-aware external view for interpreting the discovered communities."
+  ]
+}

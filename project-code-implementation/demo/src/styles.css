@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-paper font-body text-charcoal antialiased;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-[1.4rem] border border-charcoal/10 bg-white/75 shadow-editorial backdrop-blur-sm;
+  }
+
+  .panel-accent {
+    @apply rounded-[1.4rem] border border-charcoal/10 bg-charcoal text-paper shadow-editorial;
+  }
+
+  .section-kicker {
+    @apply font-mono text-[11px] uppercase tracking-[0.28em] text-charcoal/45;
+  }
+
+  .metric-card {
+    @apply panel p-5 transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(17,17,17,0.12)];
+  }
+
+  .tag {
+    @apply inline-flex rounded-full border border-charcoal/10 bg-paper px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-charcoal/65;
+  }
+
+  .data-table th {
+    @apply border-b border-charcoal/10 px-3 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] text-charcoal/55;
+  }
+
+  .data-table td {
+    @apply border-b border-charcoal/10 px-3 py-3 align-top text-sm text-charcoal/85;
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "title": "Encoding-Tree Community Analysis on a Sampled Social Benchmark",
+  "subtitle": "A community-first interface centered on late-fusion graph construction, structural-entropy minimization, and multi-scale community interpretation rather than supervised reranking.",
+  "sample": {
+    "users": 18743,
+    "tweets": 202556,
+    "edges": 378255,
+    "humans": 16157,
+    "bots": 2586,
+    "train": 12352,
+    "valid": 2471,
+    "test": 3920
+  },
+  "pipeline": [
+    "Post-type + triplet extraction",
+    "User feature table",
+    "Temporal profile construction",
+    "Late-fusion graph building",
+    "Structural-entropy encoding tree",
+    "Purity-oriented community interpretation"
+  ],
+  "graph": {
+    "users": 18743,
+    "undirectedEdges": 75754,
+    "communities": 898,
+    "largestCommunity": 283,
+    "medianCommunity": 13.0,
+    "treeDepth": 259,
+    "initialEntropy": 16.870393331528,
+    "finalEntropy": 12.343200465669,
+    "weightedModularity": 0.51300683,
+    "weightedMeanDensity": 0.1650497,
+    "weightedMeanClustering": 0.33656307,
+    "weightedMeanConductance": 0.49088964,
+    "globalPurity": 0.86426933,
+    "channelCoverage": {
+      "behavior": 1.0,
+      "content": 0.892312,
+      "network": 0.82896,
+      "temporal": 0.775436
+    },
+    "archetypeCounts": {
+      "Pure human macro-communities": 118,
+      "Compact bot communities": 103,
+      "Mixed transitional communities": 215,
+      "Sparse peripheral communities": 462
+    },
+    "k": 5,
+    "candidateK": 40
+  },
+  "groupingMethods": [
+    {
+      "methodKey": "k_means",
+      "methodName": "K-Means",
+      "communities": 898,
+      "largestCommunity": 2734,
+      "medianCommunity": 2.0,
+      "structuralEntropy": 15.98613141,
+      "weightedModularity": 0.19590943,
+      "weightedMeanDensity": 0.00300822,
+      "weightedMeanClustering": 0.06459616,
+      "weightedMeanConductance": 0.74685597,
+      "globalPurity": 0.86245532
+    },
+    {
+      "methodKey": "weighted_lpa",
+      "methodName": "Weighted LPA",
+      "communities": 241,
+      "largestCommunity": 5798,
+      "medianCommunity": 8.0,
+      "structuralEntropy": 14.20020159,
+      "weightedModularity": 0.64385246,
+      "weightedMeanDensity": 0.05752972,
+      "weightedMeanClustering": 0.1923245,
+      "weightedMeanConductance": 0.14556596,
+      "globalPurity": 0.86410926
+    },
+    {
+      "methodKey": "structural_entropy",
+      "methodName": "Structural Entropy (Ours)",
+      "communities": 898,
+      "largestCommunity": 283,
+      "medianCommunity": 13.0,
+      "structuralEntropy": 12.35366747,
+      "weightedModularity": 0.51300683,
+      "weightedMeanDensity": 0.1650497,
+      "weightedMeanClustering": 0.33656307,
+      "weightedMeanConductance": 0.49088964,
+      "globalPurity": 0.86426933
+    }
+  ],
+  "topPureHumanCommunities": [
+    {
+      "communityId": "c0001",
+      "communitySize": 283,
+      "archetype": "Pure human macro-communities",
+      "purity": 0.96113074,
+      "density": 0.02227903,
+      "clusteringCoefficient": 0.19037581,
+      "botRatio": 0.03886926
+    },
+    {
+      "communityId": "c0002",
+      "communitySize": 258,
+      "archetype": "Pure human macro-communities",
+      "purity": 0.99612403,
+      "density": 0.02566887,
+      "clusteringCoefficient": 0.22930566,
+      "botRatio": 0.00387597
+    },
+    {
+      "communityId": "c0003",
+      "communitySize": 236,
+      "archetype": "Pure human macro-communities",
+      "purity": 0.98728814,
+      "density": 0.03159034,
+      "clusteringCoefficient": 0.20281599,
+      "botRatio": 0.01271186
+    }
+  ],
+  "topCompactBotCommunities": [
+    {
+      "communityId": "c0868",
+      "communitySize": 5,
+      "archetype": "Compact bot communities",
+      "purity": 0.8,
+      "density": 0.4,
+      "clusteringCoefficient": 0.0,
+      "botRatio": 0.8
+    },
+    {
+      "communityId": "c0683",
+      "communitySize": 8,
+      "archetype": "Compact bot communities",
+      "purity": 0.75,
+      "density": 0.39285714,
+      "clusteringCoefficient": 0.4125,
+      "botRatio": 0.75
+    },
+    {
+      "communityId": "c0592",
+      "communitySize": 10,
+      "archetype": "Compact bot communities",
+      "purity": 0.7,
+      "density": 0.44444444,
+      "clusteringCoefficient": 0.4947619,
+      "botRatio": 0.7
+    }
+  ],
+  "takeaways": [
+    "The final 10k run preserves all 18,743 exported users and yields 898 encoding-tree communities on the late-fusion graph.",
+    "Structural Entropy achieves the lowest partition entropy while also producing the highest mean density and mean clustering among the compared grouping methods.",
+    "Purity is shown only as a label-aware external reference; the primary demo story is about structural partition quality and community heterogeneity."
+  ]
+}

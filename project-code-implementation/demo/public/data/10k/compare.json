@@ -1,0 +1,197 @@
+{
+  "methods": [
+    {
+      "methodKey": "k_means",
+      "methodName": "K-Means",
+      "communities": 898,
+      "largestCommunity": 2734,
+      "medianCommunity": 2.0,
+      "structuralEntropy": 15.98613141,
+      "weightedModularity": 0.19590943,
+      "weightedMeanDensity": 0.00300822,
+      "weightedMeanClustering": 0.06459616,
+      "weightedMeanConductance": 0.74685597,
+      "globalPurity": 0.86245532
+    },
+    {
+      "methodKey": "weighted_lpa",
+      "methodName": "Weighted LPA",
+      "communities": 241,
+      "largestCommunity": 5798,
+      "medianCommunity": 8.0,
+      "structuralEntropy": 14.20020159,
+      "weightedModularity": 0.64385246,
+      "weightedMeanDensity": 0.05752972,
+      "weightedMeanClustering": 0.1923245,
+      "weightedMeanConductance": 0.14556596,
+      "globalPurity": 0.86410926
+    },
+    {
+      "methodKey": "structural_entropy",
+      "methodName": "Structural Entropy (Ours)",
+      "communities": 898,
+      "largestCommunity": 283,
+      "medianCommunity": 13.0,
+      "structuralEntropy": 12.35366747,
+      "weightedModularity": 0.51300683,
+      "weightedMeanDensity": 0.1650497,
+      "weightedMeanClustering": 0.33656307,
+      "weightedMeanConductance": 0.49088964,
+      "globalPurity": 0.86426933
+    }
+  ],
+  "archetypeCounts": {
+    "Pure human macro-communities": 118,
+    "Compact bot communities": 103,
+    "Mixed transitional communities": 215,
+    "Sparse peripheral communities": 462
+  },
+  "representativeCommunities": [
+    {
+      "archetype": "Compact bot communities",
+      "selectionRank": 1,
+      "communityId": "c0868",
+      "communitySize": 5,
+      "botRatio": 0.8,
+      "purity": 0.8,
+      "density": 0.4,
+      "clusteringCoefficient": 0.0,
+      "encodingDepth": 3.4,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Compact bot communities",
+      "selectionRank": 2,
+      "communityId": "c0683",
+      "communitySize": 8,
+      "botRatio": 0.75,
+      "purity": 0.75,
+      "density": 0.39285714,
+      "clusteringCoefficient": 0.4125,
+      "encodingDepth": 4.25,
+      "predictedLabel": "bot"
+    },
+    {
+      "archetype": "Compact bot communities",
+      "selectionRank": 3,
+      "communityId": "c0592",
+      "communitySize": 10,
+      "botRatio": 0.7,
+      "purity": 0.7,
+      "density": 0.44444444,
+      "clusteringCoefficient": 0.4947619,
+      "encodingDepth": 6.4,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Mixed transitional communities",
+      "selectionRank": 1,
+      "communityId": "c0225",
+      "communitySize": 22,
+      "botRatio": 0.5,
+      "purity": 0.5,
+      "density": 0.21212121,
+      "clusteringCoefficient": 0.60151515,
+      "encodingDepth": 11.04545455,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Mixed transitional communities",
+      "selectionRank": 2,
+      "communityId": "c0799",
+      "communitySize": 6,
+      "botRatio": 0.5,
+      "purity": 0.5,
+      "density": 0.73333333,
+      "clusteringCoefficient": 0.71111111,
+      "encodingDepth": 4.33333333,
+      "predictedLabel": "bot"
+    },
+    {
+      "archetype": "Mixed transitional communities",
+      "selectionRank": 3,
+      "communityId": "c0827",
+      "communitySize": 6,
+      "botRatio": 0.5,
+      "purity": 0.5,
+      "density": 0.8,
+      "clusteringCoefficient": 0.85,
+      "encodingDepth": 4.33333333,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Pure human macro-communities",
+      "selectionRank": 1,
+      "communityId": "c0001",
+      "communitySize": 283,
+      "botRatio": 0.03886926,
+      "purity": 0.96113074,
+      "density": 0.02227903,
+      "clusteringCoefficient": 0.19037581,
+      "encodingDepth": 121.15547703,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Pure human macro-communities",
+      "selectionRank": 2,
+      "communityId": "c0002",
+      "communitySize": 258,
+      "botRatio": 0.00387597,
+      "purity": 0.99612403,
+      "density": 0.02566887,
+      "clusteringCoefficient": 0.22930566,
+      "encodingDepth": 123.78682171,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Pure human macro-communities",
+      "selectionRank": 3,
+      "communityId": "c0003",
+      "communitySize": 236,
+      "botRatio": 0.01271186,
+      "purity": 0.98728814,
+      "density": 0.03159034,
+      "clusteringCoefficient": 0.20281599,
+      "encodingDepth": 109.20338983,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Sparse peripheral communities",
+      "selectionRank": 1,
+      "communityId": "c0285",
+      "communitySize": 19,
+      "botRatio": 0.15789474,
+      "purity": 0.84210526,
+      "density": 0.11695906,
+      "clusteringCoefficient": 0.12280702,
+      "encodingDepth": 5.36842105,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Sparse peripheral communities",
+      "selectionRank": 2,
+      "communityId": "c0302",
+      "communitySize": 18,
+      "botRatio": 0.0,
+      "purity": 1.0,
+      "density": 0.11764706,
+      "clusteringCoefficient": 0.0,
+      "encodingDepth": 5.33333333,
+      "predictedLabel": "human"
+    },
+    {
+      "archetype": "Sparse peripheral communities",
+      "selectionRank": 3,
+      "communityId": "c0312",
+      "communitySize": 17,
+      "botRatio": 0.05882353,
+      "purity": 0.94117647,
+      "density": 0.125,
+      "clusteringCoefficient": 0.0,
+      "encodingDepth": 5.23529412,
+      "predictedLabel": "human"
+    }
+  ],
+  "primaryMethodKey": "structural_entropy",
+  "purityNote": "Purity is a label-aware external clustering evaluation and is not treated as the primary unsupervised optimization objective in this demo."
+}
