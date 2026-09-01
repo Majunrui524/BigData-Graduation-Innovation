@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MetricCard } from "../components/MetricCard";
 import { PipelineStrip } from "../components/PipelineStrip";
 import { useJsonData } from "../lib/data";
@@ -29,6 +30,20 @@ export function OverviewPage() {
               <span className="tag border-white/15 bg-white/10 text-paper/75">late fusion</span>
               <span className="tag border-white/15 bg-white/10 text-paper/75">structural entropy</span>
               <span className="tag border-white/15 bg-white/10 text-paper/75">encoding tree</span>
+            </div>
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <Link
+                to="/detective"
+                className="rounded-full bg-acid px-7 py-3.5 font-body text-sm font-bold text-ink transition hover:brightness-95"
+              >
+                🕵️ Try the Account Detective →
+              </Link>
+              <Link
+                to="/graph"
+                className="rounded-full border border-white/20 px-7 py-3.5 font-body text-sm font-semibold text-paper/85 transition hover:bg-white/10 hover:text-paper"
+              >
+                Explore the community graph
+              </Link>
             </div>
           </div>
         </div>

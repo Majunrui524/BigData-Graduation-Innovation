@@ -127,6 +127,13 @@ The encoding-tree partition achieves the **lowest structural entropy**, the **mo
 
 ## 🚀 Quickstart
 
+> **TL;DR — zero setup, zero API key, 5 seconds.**
+> The single command below re-verifies every headline number (0.8643 purity, 898 communities, 18,743 users, etc.) against the shipped JSON bundle — no install, no API key, no GPU.
+>
+> ```bash
+> python project-code-implementation/tools/offline_reproduce.py
+> ```
+
 ### A. Explore the interactive demo
 
 The dashboard is deployed on GitHub Pages — no setup required:
