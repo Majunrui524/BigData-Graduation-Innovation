@@ -191,15 +191,14 @@ The demo already ships with the precomputed 10k analysis bundles under `demo/pub
 
 This repository is the code release for the undergraduate thesis:
 
-> **Anonymous.** *Intelligent Detection of Human-Machine Accounts on Social Media Platforms Using Community Detection based on Multi-relational Graph.* Bachelor's Thesis, Anonymous School, Anonymous Institution, 2025. [PDF](paper/Outstanding-Graduation-Innovation-Project.pdf)
+> Anonymous undergraduate thesis, 2025. *Intelligent Detection of Human-Machine Accounts on Social Media Platforms Using Community Detection based on Multi-relational Graph.* [PDF](paper/Outstanding-Graduation-Innovation-Project.pdf)
 
 If you use this work in your research, please cite it (BibTeX):
 
 ```bibtex
-@thesis{ma2025botdetection,
+@thesis{anonymous2025botdetection,
   title  = {Intelligent Detection of Human-Machine Accounts on Social Media Platforms Using Community Detection based on Multi-relational Graph},
   author = {Anonymous},
-  school = {Anonymous Institution},
   year   = {2025}
 }
 ```
@@ -235,4 +234,4 @@ Bug reports, dataset additions, alternative graph-construction strategies, and d
 
 ## 📜 License
 
-[MIT](LICENSE) © Anonymous
+[MIT](LICENSE) © 2025 Anonymous
