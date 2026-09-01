@@ -81,7 +81,7 @@ Most social-bot detectors are **supervised**: they need thousands of human-annot
 ```
 
 <p align="center">
-  <img src="docs/figures/figure-01-pipeline-overview.png" alt="End-to-end pipeline: data → four views → adaptive fusion → encoding tree → community clusters" width="100%">
+  <img src="docs/figures/figure-01-pipeline-overview.png" alt="End-to-end pipeline: data → four views → adaptive fusion → encoding tree → community clusters" style="max-width: 1100px; width: 100%; display: block; margin: 1.5rem auto;">
 </p>
 
 ---
@@ -198,7 +198,7 @@ The demo already ships with the precomputed 10k analysis bundles under `demo/pub
 The pipeline proceeds in five tightly-coupled stages (Fig. 1). Each TwiBot-22 user is first compressed into a four-channel feature vector spanning *what* they post (LLM triplets + post-type), *how* they post (statistics + URL/JS diversity), *when* they post (24-hour DTW-aligned activity), and *whom* they follow (Jaccard similarity over their ego-graph). The four channels are then fused into a single weighted user graph via an **adaptive late-fusion** scheme that re-normalizes view weights over the set $\mathcal{O}$ of observed modalities only, so accounts with missing data are not unfairly penalized. A **structural-entropy encoding tree** is then built greedily over this graph: at every step we merge the pair of communities whose union most reduces structural entropy $\mathcal{H}(\mathcal{T})$, and the entropy minimum identifies the natural community scale. The 898 resulting communities are grouped into four structural archetypes — pure-human macro-regions, compact bot clusters, mixed transitional zones, and sparse periphery — and characterized *post-hoc* by a label-aware purity score. **Crucially, ground-truth labels never enter the optimization; they only serve to interpret an already-discovered structure.**
 
 <p align="center">
-  <img src="docs/figures/figure-01-pipeline-overview.png" alt="End-to-end pipeline: data → four views → adaptive fusion → encoding tree → community clusters" width="100%">
+  <img src="docs/figures/figure-01-pipeline-overview.png" alt="End-to-end pipeline: data → four views → adaptive fusion → encoding tree → community clusters" style="max-width: 1100px; width: 100%; display: block; margin: 1.5rem auto;">
 </p>
 
 ### Why Unsupervised, Why Graph-Centric
@@ -208,7 +208,7 @@ Modern AI-driven bots (GPT-3 / LLaMA / GPT-4-class) generate context-aware, huma
 ### Four Complementary Evidence Views
 
 <p align="center">
-  <img src="docs/figures/figure-02-multiview-features.png" alt="Four complementary views for social media account profiling" width="100%">
+  <img src="docs/figures/figure-02-multiview-features.png" alt="Four complementary views for social media account profiling" style="max-width: 1100px; width: 100%; display: block; margin: 1.5rem auto;">
 </p>
 
 Each view captures a different facet of the human/bot distinction, and *no single view is sufficient*. **(a) Content** uses an LLM triplet-encoder to compress raw post text into a compact embedding, with post-type frequency acting as a coarse category prior. **(b) Behavior** summarizes posting volume, JS-string diversity, URL share, and retweet ratio — bot accounts cluster on extreme values (very high frequency, near-zero JS diversity). **(c) Temporal** measures the 24-hour activity curve via Dynamic Time Warping against a canonical human diurnal pattern; bot accounts are nearly uniform across the day. **(d) Network** uses Jaccard similarity over followee sets to surface dense mutual-following clusters, the canonical signature of bot rings. The four views are weakly correlated, so a single account can be confidently classified only by *fusing* them (Fig. 3).
@@ -216,7 +216,7 @@ Each view captures a different facet of the human/bot distinction, and *no singl
 ### Adaptive Late-Fusion Graph Construction
 
 <p align="center">
-  <img src="docs/figures/figure-03-adaptive-fusion.png" alt="Adaptive late-fusion with missing-modality re-normalization" width="100%">
+  <img src="docs/figures/figure-03-adaptive-fusion.png" alt="Adaptive late-fusion with missing-modality re-normalization" style="max-width: 1100px; width: 100%; display: block; margin: 1.5rem auto;">
 </p>
 
 Naive concatenation penalizes accounts with missing modalities (e.g., a private account with no public posts); naive averaging lets a single noisy modality dominate. Our adaptive scheme computes one similarity matrix per view, then forms a fused edge weight by re-normalizing each view's base importance $\hat{w}_i$ **only over the views that are observed** for the account pair under consideration. This gives $w_i = \hat{w}_i \big/ \sum_{j \in \mathcal{O}} \hat{w}_j$, where $\mathcal{O}$ is the observed-modality set. The dashed matrix in Fig. 3 illustrates the mechanism: an unobserved view is excluded from the denominator rather than being imputed or zeroed. The output is a weighted multi-view graph in which edge weight equals fused similarity.
@@ -224,7 +224,7 @@ Naive concatenation penalizes accounts with missing modalities (e.g., a private 
 ### Structural-Entropy Community Discovery
 
 <p align="center">
-  <img src="docs/figures/figure-04-encoding-tree.png" alt="Structural-entropy encoding tree for community detection" width="100%">
+  <img src="docs/figures/figure-04-encoding-tree.png" alt="Structural-entropy encoding tree for community detection" style="max-width: 1100px; width: 100%; display: block; margin: 1.5rem auto;">
 </p>
 
 The weighted graph is partitioned by **greedy agglomerative minimization of structural entropy** (Li & Pan, 2016). Each step merges the pair of communities whose union maximally reduces $\mathcal{H}(\mathcal{T})$ — a topological-information-theoretic cost that penalizes both small disconnected pieces and over-large lumps. The encoding tree (middle panel) makes the multi-scale structure explicit: every leaf is a single user, every internal node is a tentative community, and the global minimum of $\mathcal{H}$ identifies the natural scale (right panel). Crucially, the partition is **label-free**; no supervised loss is ever minimized.
@@ -232,7 +232,7 @@ The weighted graph is partitioned by **greedy agglomerative minimization of stru
 ### Post-Hoc Purity Interpretation
 
 <p align="center">
-  <img src="docs/figures/figure-05-community-archetypes.png" alt="Four community archetypes discovered with post-hoc purity interpretation" width="100%">
+  <img src="docs/figures/figure-05-community-archetypes.png" alt="Four community archetypes discovered with post-hoc purity interpretation" style="max-width: 1100px; width: 100%; display: block; margin: 1.5rem auto;">
 </p>
 
 The 898 discovered communities are grouped into four structural archetypes by their **post-hoc** label majority. Pure-human macro-regions are large and sparse; compact bot clusters are small, dense, and tightly interlinked; mixed transitional zones sit between them; sparse periphery groups isolated fragments. The global purity $\frac{1}{|\mathcal{C}|} \sum_C \max_y P(y \mid C) = 0.8643$ serves as a **validity indicator**, not a training objective — it tells us the discovered structure aligns with human labeling, but the labels never guided the search. This separation between *what is optimized* (structural entropy) and *what is reported* (label purity) is the methodological core of the project.
