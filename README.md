@@ -4,6 +4,10 @@
 
 **Unsupervised Social Bot Detection with Structural-Entropy Community Detection on Multi-Relational Graphs**
 
+<p align="center">
+  <img src="docs/screenshots/02-graph.png" alt="Encoding-tree community graph: 898 communities on 18,743 users" width="92%">
+</p>
+
 Detect coordinated social-bot networks **without a single training label**. LLM-assisted multi-view feature fusion → adaptive late-fusion graph construction → structural-entropy encoding-tree community discovery → purity-based interpretation.
 
 [🚀 Live Demo](https://Majunrui524.github.io/BigData-Graduation-Innovation/) · [📄 Paper (PDF)](paper/Outstanding-Graduation-Innovation-Project.pdf) · [🐍 Python ≥ 3.10](https://www.python.org/) · [📜 MIT License](LICENSE)
@@ -21,6 +25,19 @@ Most social-bot detectors are **supervised**: they need thousands of human-annot
 - **Missing data friendly.** An *adaptive late-fusion* scheme re-normalizes over observed modalities only, so incomplete profiles are never unfairly penalized.
 - **Beyond a binary split.** The encoding tree surfaces **898 heterogeneous communities** — pure-human macro-regions, compact bot clusters, mixed transitional zones, and sparse periphery — an interpretable structural map, not just a bot/human verdict.
 - **Interactive explainer.** A polished React dashboard lets you explore the full 10k-user graph, community-by-community, in your browser.
+
+---
+
+## 🖼 Live Demo Screenshots
+
+| | |
+|:---:|:---:|
+| ![Overview](docs/screenshots/01-overview.png) | ![Graph](docs/screenshots/02-graph.png) |
+| *Executive summary · 18,743 users · 898 communities* | *Encoding-tree community graph · density / clustering toggle* |
+| ![Communities](docs/screenshots/03-communities.png) | ![Compare](docs/screenshots/04-compare.png) |
+| *Community table · size / purity / density / archetype* | *K-Means vs Weighted LPA vs Structural Entropy (Ours)* |
+
+> The full interactive dashboard is live at **[Majunrui524.github.io/BigData-Graduation-Innovation](https://Majunrui524.github.io/BigData-Graduation-Innovation/)** — click any community node on the graph page to inspect its structure, archetype, and representative users.
 
 ---
 
@@ -201,6 +218,18 @@ If you use this work in your research, please cite it (BibTeX):
 
 - [TwiBot-22](https://github.com/LuoUndergradXJTU/TwiBot22) benchmark dataset
 - The structural information theory line of work (Li & Pan, 2016) that inspired the encoding-tree formulation
+
+---
+
+## ⭐ Show Your Support
+
+If this work resonates with your research, gave you an idea, or saved you some exploration time on the structural-entropy / community-detection rabbit hole — **a star on GitHub** is the easiest way to say thanks and helps the project reach other researchers working on bot detection, social-graph analysis, or unsupervised graph methods.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Majunrui524/BigData-Graduation-Innovation&type=Date)](https://star-history.com/#Majunrui524/BigData-Graduation-Innovation&Date)
+
+### 🙌 Contributing
+
+Bug reports, dataset additions, alternative graph-construction strategies, and docs fixes are very welcome. Please open an issue first to discuss substantial changes; small fixes can go straight to a PR. The 26-module `pytest` suite under `project-code-implementation/tests/` is the fastest way to verify your changes don't regress core behavior.
 
 ---
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { width: 1280px; height: 640px; overflow: hidden; font-family: -apple-system, "Segoe UI", "Helvetica Neue", "Inter", sans-serif; }
+  body {
+    width: 1280px;
+    height: 640px;
+    color: #f5f0e8;
+    background: radial-gradient(ellipse at 30% 20%, #1a1a1a 0%, #0a0a0a 60%, #050505 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .left {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 560px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .right {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    width: 480px;
+    height: 480px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 7px 16px;
+    background: rgba(197, 224, 99, 0.12);
+    border: 1px solid rgba(197, 224, 99, 0.35);
+    border-radius: 999px;
+    color: #c5e063;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  h1 .accent { color: #c5e063; }
+  h2 {
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #d4cfc4;
+    margin-bottom: 24px;
+    max-width: 580px;
+  }
+  .tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .tag {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    font-size: 12px;
+    color: #b8b3a8;
+    font-weight: 500;
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #908b80;
+  }
+  .author-name { color: #e8e3d8; font-weight: 600; }
+  .author-divider { color: #4a4740; }
+  .right {
+    width: 480px;
+    height: 480px;
+    align-self: center;
+  }
+  .right svg { width: 100%; height: 100%; }
+  .glow-green { filter: drop-shadow(0 0 8px rgba(197, 224, 99, 0.4)); }
+  .glow-orange { filter: drop-shadow(0 0 6px rgba(255, 107, 53, 0.5)); }
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="badge">Bachelor Thesis · 2025</div>
+    <h1>Unsupervised<br>Social Bot Detection<br>via <span class="accent">Structural Entropy</span></h1>
+    <h2>Multi-relational graph · LLM-assisted feature fusion · 898 communities discovered on TwiBot-22</h2>
+    <div class="tags">
+      <div class="tag">#Bot-Detection</div>
+      <div class="tag">#Community-Detection</div>
+      <div class="tag">#Graph-Algorithm</div>
+      <div class="tag">#Unsupervised</div>
+    </div>
+    <div class="author">
+      <span class="author-name">Anonymous</span>
+      <span class="author-divider">·</span>
+      <span>Anonymous Institution</span>
+    </div>
+  </div>
+  <div class="right">
+    <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="rgba(197, 224, 99, 0.18)" stroke-width="0.8" fill="none">
+        <line x1="240" y1="240" x2="120" y2="100"/>
+        <line x1="240" y1="240" x2="80" y2="180"/>
+        <line x1="240" y1="240" x2="60" y2="290"/>
+        <line x1="240" y1="240" x2="110" y2="380"/>
+        <line x1="240" y1="240" x2="220" y2="430"/>
+        <line x1="240" y1="240" x2="360" y2="410"/>
+        <line x1="240" y1="240" x2="420" y2="320"/>
+        <line x1="240" y1="240" x2="430" y2="210"/>
+        <line x1="240" y1="240" x2="380" y2="100"/>
+        <line x1="240" y1="240" x2="280" y2="60"/>
+        <line x1="120" y1="100" x2="80" y2="180"/>
+        <line x1="80" y1="180" x2="60" y2="290"/>
+        <line x1="60" y1="290" x2="110" y2="380"/>
+        <line x1="110" y1="380" x2="220" y2="430"/>
+        <line x1="220" y1="430" x2="360" y2="410"/>
+        <line x1="360" y1="410" x2="420" y2="320"/>
+        <line x1="420" y1="320" x2="430" y2="210"/>
+        <line x1="430" y1="210" x2="380" y2="100"/>
+        <line x1="380" y1="100" x2="280" y2="60"/>
+        <line x1="280" y1="60" x2="120" y2="100"/>
+        <line x1="120" y1="100" x2="280" y2="60"/>
+        <line x1="380" y1="100" x2="430" y2="210"/>
+        <line x1="80" y1="180" x2="110" y2="380"/>
+        <line x1="60" y1="290" x2="220" y2="430"/>
+        <line x1="360" y1="410" x2="420" y2="320"/>
+        <line x1="120" y1="100" x2="60" y2="290"/>
+        <line x1="280" y1="60" x2="380" y2="100"/>
+        <line x1="430" y1="210" x2="420" y2="320"/>
+      </g>
+      <g class="glow-green">
+        <circle cx="120" cy="100" r="11" fill="#c5e063"/>
+        <circle cx="80" cy="180" r="9" fill="#c5e063"/>
+        <circle cx="60" cy="290" r="12" fill="#c5e063"/>
+        <circle cx="110" cy="380" r="10" fill="#c5e063"/>
+        <circle cx="220" cy="430" r="8" fill="#c5e063"/>
+        <circle cx="360" cy="410" r="11" fill="#c5e063"/>
+        <circle cx="420" cy="320" r="9" fill="#c5e063"/>
+        <circle cx="430" cy="210" r="10" fill="#c5e063"/>
+        <circle cx="380" cy="100" r="8" fill="#c5e063"/>
+        <circle cx="280" cy="60" r="9" fill="#c5e063"/>
+      </g>
+      <g class="glow-orange">
+        <circle cx="290" cy="305" r="7" fill="#ff6b35"/>
+        <circle cx="305" cy="325" r="8" fill="#ff6b35"/>
+        <circle cx="320" cy="295" r="6" fill="#ff6b35"/>
+        <circle cx="335" cy="320" r="7" fill="#ff6b35"/>
+        <circle cx="315" cy="345" r="6" fill="#ff6b35"/>
+      </g>
+      <g>
+        <circle cx="240" cy="240" r="38" fill="rgba(197, 224, 99, 0.08)" stroke="rgba(197, 224, 99, 0.4)" stroke-width="1.5"/>
+        <circle cx="240" cy="240" r="22" fill="#c5e063"/>
+        <circle cx="240" cy="240" r="10" fill="#0a0a0a"/>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
