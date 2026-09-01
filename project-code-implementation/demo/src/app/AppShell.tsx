@@ -33,6 +33,23 @@ export function AppShell({ children }: PropsWithChildren) {
               Late Fusion Community Structure Explorer
             </h1>
           </div>
+          <div className="hidden items-center gap-2 sm:flex">
+            <a
+              href="https://github.com/Majunrui524/BigData-Graduation-Innovation#detective"
+              className="rounded-full border border-charcoal/15 bg-white/80 px-4 py-2 font-body text-sm font-semibold text-charcoal/75 transition hover:border-charcoal/40 hover:text-charcoal"
+            >
+              <span aria-hidden="true">📖</span> How to read this
+            </a>
+            <a
+              href="https://github.com/Majunrui524/BigData-Graduation-Innovation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 rounded-full bg-charcoal px-4 py-2 font-body text-sm font-semibold text-paper transition hover:bg-ink"
+            >
+              <span aria-hidden="true" className="text-acid transition group-hover:scale-110">★</span>
+              Star on GitHub
+            </a>
+          </div>
         </div>
         <nav className="mx-auto flex max-w-[1440px] gap-2 overflow-auto px-5 pb-4 lg:px-8">
           {navItems.map((item) => (
