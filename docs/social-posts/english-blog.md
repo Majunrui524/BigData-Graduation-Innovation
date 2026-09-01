@@ -17,7 +17,7 @@ Two structural problems with the supervised paradigm:
 1. **Labels are expensive and scarce.** Public benchmarks like TwiBot-22 cost enormous human effort per annotation. Scaling beyond a few hundred thousand accounts is impractical.
 2. **It decays.** Bots evolve faster than annotation pipelines can retrain.
 
-My bachelor thesis asked a different question: **bots appear in coordinated groups — so why not let the graph structure itself reveal them?**
+My graduation project asked a different question: **bots appear in coordinated groups — so why not let the graph structure itself reveal them?**
 
 ### The pipeline: multi-view features → adaptive late fusion → structural-entropy encoding tree
 
@@ -56,7 +56,6 @@ Post-hoc archetype analysis grouped the 898 communities into pure-human macro-co
 - 26 pytest modules guarding core logic
 - React + Vite + ECharts + Sigma interactive dashboard — click any community on the 10k-user graph to inspect its structure, archetype, and representative users
 - Demo deployed on GitHub Pages, zero setup
-- Full 41-page thesis PDF (PII removed) included in the repo
 
 GitHub: https://github.com/Majunrui524/BigData-Graduation-Innovation
 Live Demo: https://Majunrui524.github.io/BigData-Graduation-Innovation/
@@ -70,7 +69,3 @@ Live Demo: https://Majunrui524.github.io/BigData-Graduation-Innovation/
 ### Try it
 
 If you work on bot detection, graph algorithms, or community detection, the repo is MIT-licensed and open for forks, issues, and PRs. If the ideas resonated, a GitHub star is the easiest way to help other researchers find this line of work.
-
----
-
-*For citations, use the BibTeX in the project README.*

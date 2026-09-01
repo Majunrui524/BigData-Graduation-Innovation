@@ -2,8 +2,7 @@
 
 > 仓库：https://github.com/Majunrui524/BigData-Graduation-Innovation
 > Demo：https://Majunrui524.github.io/BigData-Graduation-Innovation/
-> 论文 PDF 在仓库 paper/ 目录下
-> 作者信息已脱敏，引用请用上方 BibTeX 模板
+> 核心创新思路已总结在 README（Research Highlights）
 
 ---
 
@@ -23,7 +22,7 @@
 可视化 Demo 直接在浏览器里点着玩
 10k 用户网络图，点哪个社区看哪个 (｡•̀ᴗ-)✧
 
-论文也开源了，中英齐全
+代码全开源，思路都写在 README 里
 需要思路的学弟学妹直接抄作业 (ง •̀_•́)ง
 
 链接放这：
@@ -59,7 +58,7 @@ Demo 直接在线玩：
 https://Majunrui524.github.io/BigData-Graduation-Innovation/
 网络图点开社区就能看结构、纯度和代表性用户
 
-论文 PDF 也放仓库了，41 页全公开
+核心思路和代码全开源，README 里讲得明明白白
 想抄作业的，star 一下当学费 (っ´ω`)ﾉ
 
 #毕业论文 #开源 #毕业设计 #机器学习 #图神经网络 #社区发现 #社交机器人 #港硕
@@ -68,7 +67,7 @@ https://Majunrui524.github.io/BigData-Graduation-Innovation/
 
 ## 版本 C：完整长文版（适合图文详情页）
 
-标题：毕设答辩第一名，我把代码和论文全部开源了（附 Demo）
+标题：毕设答辩第一名，我把整个项目开源了（附 Demo）
 
 正文：
 
@@ -100,7 +99,7 @@ Demo:  https://Majunrui524.github.io/BigData-Graduation-Innovation/
 如果你也在做机器人检测 / 图算法 / 社区发现，欢迎 fork 一起玩。
 顺手点个 star，让更多人看到这套思路，谢谢 (・ω・)ノ
 
-#毕业设计 #开源项目 #机器学习 #图算法 #社区发现 #社交网络分析 #论文 #GitHub
+#毕业设计 #开源项目 #机器学习 #图算法 #社区发现 #社交网络分析 #GitHub
 
 ---
 

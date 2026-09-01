@@ -51,7 +51,7 @@
 
 进一步做后验分析，898 个社区可以归为 4 类原型：纯真人宏观社区、紧凑机器人社区、混合过渡社区、稀疏边缘碎片。机器人的"窝"是又小又密的——这个规律肉眼可见地浮现出来。
 
-### 四、工程化：不只论文，还有能跑的代码和 Demo
+### 四、工程化：不只是思路，还有能跑的代码和 Demo
 
 学术工作最怕"论文好看，代码找不到"。这次我把工程完整开源了：
 
@@ -59,7 +59,7 @@
 - **26 个 pytest 模块**：核心逻辑都有测试兜底
 - **React + Vite + ECharts + Sigma 可视化**：10k 用户网络图浏览器直接点着玩，点社区看纯度/密度/代表性用户
 - **Demo 部署在 GitHub Pages**：打开即用，无需本地环境
-- **论文 PDF 41 页全公开**（首页个人信息已脱敏）
+- **核心创新思路 + 完整代码全开源**（README 的 Research Highlights 已总结创新点）
 
 GitHub: https://github.com/Majunrui524/BigData-Graduation-Innovation
 Demo: https://Majunrui524.github.io/BigData-Graduation-Innovation/
@@ -77,7 +77,3 @@ Demo: https://Majunrui524.github.io/BigData-Graduation-Innovation/
 - **别急着上 GNN**。无监督的图结构方法（结构熵、模块度、标签传播）在很多场景下又稳又快，还不需要标注。
 - **多视图融合的价值被低估了**。内容 + 行为 + 时间 + 网络四路证据互补，单看任何一路都会被骗。
 - **社区发现结果的"可解释性"很重要**。不是输出一个 bot/human 二分就完事，能解释"这个社区为什么是机器人的窝"才是有说服力的工作。
-
----
-
-*如需引用，请使用 README 中的 BibTeX 格式（已脱敏）。*
