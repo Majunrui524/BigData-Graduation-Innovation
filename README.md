@@ -10,7 +10,7 @@
 
 Detect coordinated social-bot networks **without a single training label**. LLM-assisted multi-view feature fusion → adaptive late-fusion graph construction → structural-entropy encoding-tree community discovery → purity-based interpretation.
 
-[🚀 Live Demo](https://Majunrui524.github.io/BigData-Graduation-Innovation/) · [📄 Paper (PDF)](paper/Outstanding-Graduation-Innovation-Project.pdf) · [🐍 Python ≥ 3.10](https://www.python.org/) · [📜 MIT License](LICENSE)
+[🚀 Live Demo](https://Majunrui524.github.io/BigData-Graduation-Innovation/) · [🧠 Research Highlights](#-research-highlights) · [🐍 Python ≥ 3.10](https://www.python.org/) · [📜 MIT License](LICENSE)
 
 </div>
 
@@ -86,8 +86,6 @@ Most social-bot detectors are **supervised**: they need thousands of human-annot
 
 ```
 bigdata-graduation-innovation/
-├── paper/                               # 📄 Thesis report (PDF)
-│   └── Outstanding-Graduation-Innovation-Project.pdf
 ├── project-code-implementation/         # 🐍 Main implementation
 │   ├── src/twibot22_sampler/            # Core Python package (~12k lines)
 │   │   ├── cli.py                       #   CLI entry: 10+ subcommands
@@ -187,13 +185,27 @@ The demo already ships with the precomputed 10k analysis bundles under `demo/pub
 
 ---
 
-## 📄 Paper & Citation
+## 🧠 Research Highlights
 
-This repository is the code release for the undergraduate thesis:
+> This repository is the open-source code release of a 2025 undergraduate thesis. The full thesis text is **not** publicly distributed; the core innovations are summarized below.
 
-> Anonymous undergraduate thesis, 2025. *Intelligent Detection of Human-Machine Accounts on Social Media Platforms Using Community Detection based on Multi-relational Graph.* [PDF](paper/Outstanding-Graduation-Innovation-Project.pdf)
+**Problem.** Modern AI-driven bots (GPT-3/LLaMA/GPT-4-class) generate context-aware, human-indistinguishable content in real time. Rule-based and supervised detectors are losing the arms race — they depend on static features and expensive labels, and they cannot generalize to zero-day bot strategies.
 
-If you use this work in your research, please cite it (BibTeX):
+**Our answer is a fully unsupervised, graph-centric pipeline** that never optimizes against a single label:
+
+- **Four complementary evidence views.** Content (LLM-assisted semantic compression: post-type + triplet), behavior (posting statistics + JS diversity), temporal (circadian rhythm via DTW), and network (follower topology via Jaccard + degree) — each captures a different facet of what separates a person from a coordinated program.
+- **Adaptive late-fusion graph construction.** The four views are fused into one weighted multi-view user graph with an adaptive scheme that re-normalizes over *observed* modalities only — accounts with missing data are handled gracefully, never unfairly penalized.
+- **Structural-entropy community discovery.** Instead of a supervised classifier, the graph is partitioned by greedy agglomerative *encoding-tree* minimization of structural entropy — communities emerge purely from topological cohesion, with no labels involved.
+- **Post-hoc purity interpretation.** Labels are used *only* to interpret the discovered structure (purity scoring), never to guide optimization. The result is an interpretable structural map: **898 communities across 4 archetypes** — pure-human macro-regions, compact bot clusters, mixed transitional zones, and sparse periphery — moving beyond a naive human/bot binary.
+- **Interactive explorer.** A React dashboard visualizes the full 10k-user graph, community by community, straight in the browser (no backend needed).
+
+**Key numbers (10k sampled TwiBot-22 subgraph):** lowest structural entropy **12.3537** (vs 15.9861 K-Means), largest community compacted from 2,734 → **283 users**, density ×55 and clustering ×5 over K-Means, and global label-aware purity **0.8643** — all achieved without a single training label.
+
+---
+
+## 📚 Citation
+
+If you find the approach useful in your research, please cite (BibTeX):
 
 ```bibtex
 @thesis{anonymous2025botdetection,
